@@ -19,7 +19,10 @@ data = r.json()
 
 # Calculate average
 def get_average(array):
-	return sum(array) / len(array)
+	if len(array) > 0:
+		return sum(array) / len(array)
+	else:
+		return None
 
 
 print('Average price of time window from {} to {}').format(offset_time, current_time)
@@ -31,7 +34,7 @@ for row in data:
 
 body = {
 
-	"timestamp": current_time,
+	"date": current_time,
 	"smv_value": get_average(moving_average_array)
 }
 
