@@ -1,0 +1,1 @@
+# bitstamp-to-es
